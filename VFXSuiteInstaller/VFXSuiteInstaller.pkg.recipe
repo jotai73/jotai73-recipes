@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Recipe description</string>
+	<key>Identifier</key>
+	<string>com.github.jotai73.redgiant.vfxsuiteinstaller.pkg</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>VFXSuiteInstaller</string>
+	</dict>
+	<key>MiniumumVersion</key>
+	<string>1.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jotai73.redgiant.vfxsuiteinstaller.download</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>Processor</key>
+				<string>PkgRootCreator</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pkgroot</key>
+					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+					<key>pkgdirs</key>
+					<dict/>
+				</dict>
+			</dict>
+				<key>Processor</key>
+				<string>Unarchiver</string>
+				<key>Arguments</key>
+				<dict>
+					<key>archive_path</key>
+					<string>%pathname%</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/Scripts</string>
+					<key>purge_destination</key>
+					<true/>
+				</dict>
+				<key>Processor</key>
+				<string>FileCreator</string>
+				<key>Arguments</key>
+				<dict>
+					<key>file_path</key>
+					<string>%RECIPE_CACHE_DIR/Scripts/postinstall</string>
+					<key>file_mode</key>
+					<string>0755</string>
+					<key>file_content</key>
+					<string>#!/bin/bash
+install_dir=$(dirname "${0}")
+cd "${install_dir}"/VFX Suite*Installer.app/Contents/MacOS || exit
+../Scripts/install.sh</string>
+				</dict>
+				<key>Processor</key>
+				<string>PkgCreator</string>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_request</key>
+					<dict>
+						<key>pkgroot</key>
+						<string>%RECIPE_CACHE_DIR%/pkg_root</string>
+						<key>pkgname</key>
+						<string>%NAME%-%version%</string>
+						<key>version</key>
+						<string>%version%</string>
+						<key>id</key>
+						<string>com.redgiant.VFX-Suite-Installer</string>
+						<key>options</key>
+						<string>purge_ds_store</string>
+						<key>scripts</key>
+						<string>Scripts</string>
+					</dict>
+				</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
