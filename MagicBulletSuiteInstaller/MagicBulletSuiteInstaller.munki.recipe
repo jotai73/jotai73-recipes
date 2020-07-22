@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Recipe description</string>
+	<key>Identifier</key>
+	<string>com.github.jotai73.munki.magicbulletsuiteinstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>MagicBulletSuiteInstaller</string>
+	</dict>
+	<key>MiniumumVersion</key>
+	<string>1.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jotai73.pkg.magicbulletsuiteinstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/graphics</string>
+		<key>NAME</key>
+		<string>MagicBulletSuiteInstaller</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>graphics</string>
+			<key>description</key>
+			<string>Color correction, finishing and film looks for filmmakers</string>
+			<key>developer</key>
+			<string>Red Giant</string>
+			<key>display_name</key>
+			<string>Red Giant Magic Bullet Suite Installer</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstall_method</key>
+			<string>uninstall_script</string>
+			<key>uninstall_script</key>
+			<string>#!/bin/bash
+version="%version%"
+bundle_id="%bundle_id%"
+			
+/Users/Shared/Red\ Giant/uninstall/uninstall-com.redgiant.magicbullet_v"${version}".sh
+pkgutil --forget "${bundle_id}"</string>
+		</dict>
+	</dict>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pkg_path%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
