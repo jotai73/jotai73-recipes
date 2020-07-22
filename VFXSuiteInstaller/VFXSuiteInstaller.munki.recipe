@@ -24,7 +24,9 @@
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
-			<string>testing</string>
+			<array>
+				<string>testing</string>
+			</array>
 			<key>category</key>
 			<string>graphics</string>
 			<key>description</key>
