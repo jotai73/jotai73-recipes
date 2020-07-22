@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Recipe description</string>
+	<string>Process and package Red Giant's Magic Bullet Suite</string>
 	<key>Identifier</key>
 	<string>com.github.jotai73.pkg.magicbulletsuiteinstaller</string>
 	<key>Input</key>
@@ -46,7 +46,7 @@
 					<key>CFBundleIdentifier</key>
 					<string>bundle_id</string>
 				</dict>
-			</dict>	
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
@@ -75,12 +75,12 @@
 			<string>Copier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>source_path</key> 
+				<key>source_path</key>
 				<string>%found_filename%</string>
 				<key>overwrite</key>
 				<true/>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/Scripts/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/Scripts/MagicBulletSuite.app</string>
 			</dict>
 		</dict>
 		<dict>
