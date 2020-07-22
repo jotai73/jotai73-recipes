@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Recipe description</string>
+	<key>Identifier</key>
+	<string>com.github.jotai73.munki.vfxsuiteinstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>VFXSuiteInstaller</string>
+	</dict>
+	<key>MiniumumVersion</key>
+	<string>1.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jotai73.pkg.vfxsuiteinstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/graphics</string>
+		<key>NAME</key>
+		<string>VFXSuiteInstaller</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<string>testing</string>
+			<key>category</key>
+			<string>graphics</string>
+			<key>description</key>
+			<string>Keying, tracking, cleanup, and visual effects compositing, right inside of After Effects</string>
+			<key>developer</key>
+			<string>Red Giant</string>
+			<key>display_name</key>
+			<string>Red Giant VFX Suite Installer</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>uninstall_method</key>
+			<string>uninstall_script</string>
+			<key>uninstall_script</key>
+			<string>#!/bin/bash
+			
+/Users/Shared/Red\ Giant/uninstall/uninstall-com.redgiant.vfx_v1.5.1.sh
+pkgutil --forget com.redgiant.VFX-Suite-Installer</string>
+		</dict>
+	</dict>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pkg_path%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
