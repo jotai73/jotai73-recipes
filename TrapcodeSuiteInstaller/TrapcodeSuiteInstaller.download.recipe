@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Download Magic Bullet Suite Installer zip file</string>
+	<string>Download Trapcode Suite Installer zip file</string>
 	<key>Identifier</key>
 	<string>com.github.jotai73.download.trapcodesuiteinstaller</string>
 	<key>Input</key>

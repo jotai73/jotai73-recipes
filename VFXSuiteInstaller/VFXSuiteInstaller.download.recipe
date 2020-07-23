@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Recipe description</string>
+	<string>Download VFX Suite intaller from Red Giant</string>
 	<key>Identifier</key>
 	<string>com.github.jotai73.download.vfxsuiteinstaller</string>
 	<key>Input</key>

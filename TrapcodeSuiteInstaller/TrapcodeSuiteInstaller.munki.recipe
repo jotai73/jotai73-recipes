@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Import Red Giant's Magic Bullet Suite package into Munki</string>
+	<string>Import Red Giant's Trapcode Suite package into Munki</string>
 	<key>Identifier</key>
 	<string>com.github.jotai73.munki.trapcodesuiteinstaller</string>
 	<key>Input</key>

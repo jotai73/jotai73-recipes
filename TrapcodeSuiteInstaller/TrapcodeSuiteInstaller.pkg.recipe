@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Process and package Red Giant's Magic Bullet Suite</string>
+	<string>Process and package Red Giant's Trapcode Suite</string>
 	<key>Identifier</key>
 	<string>com.github.jotai73.pkg.trapcodesuiteinstaller</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>MagicBulletSuiteInstaller</string>
+		<string>TrapcodeSuiteInstaller</string>
 	</dict>
 	<key>MiniumumVersion</key>
 	<string>1.0</string>
