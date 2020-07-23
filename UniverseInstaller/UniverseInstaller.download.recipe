@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Download Red Giant Universe Installer zip file</string>
+	<key>Identifier</key>
+	<string>com.github.jotai73.download.universeinstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>UniverseInstaller</string>
+	</dict>
+	<key>MiniumumVersion</key>
+	<string>1.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://downloads.redgiant.com/redgiant/products/singlesuites/universe/Universe_Mac_Scripted.zip</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
