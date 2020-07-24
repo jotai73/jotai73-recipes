@@ -66,8 +66,6 @@
 
 		/Users/Shared/Red\ Giant/uninstall/uninstall-com.redgiant.magicbullet_v"${version}".sh
 		pkgutil --forget "${bundle_id}"</string>
-					<key>icon_name</key>
-					<string>RedGiant.png</string>
 				</dict>
 			</dict>
 		</dict>
