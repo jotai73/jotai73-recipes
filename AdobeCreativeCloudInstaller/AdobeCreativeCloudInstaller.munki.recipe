@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>AdobeCreativeCloudAppInstaller</string>
+		<string>AdobeCreativeCloudInstaller</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/graphics</string>
 		<key>pkginfo</key>
@@ -25,7 +25,9 @@
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>update_for</key>
-			<string>AdobeCreativeCloud</string>
+			<array>
+				<string>AdobeCreativeCloud</string>
+			</array>
 		</dict>
 	</dict>
 	<key>MiniumumVersion</key>
