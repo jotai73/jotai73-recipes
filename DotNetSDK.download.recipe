@@ -9,7 +9,7 @@ Valid PLATFORM_ARCH arguments are:
 - "arm64": Downloads .NET for Apple Silicon Macs
 - "x64": Downloads .NET for Intel Macs (default)</string>
         <key>Identifier</key>
-        <string>com.github.gerardkok.download.DotNetSDK</string>
+        <string>com.github.jotai73.download.DotNetSDK</string>
         <key>Input</key>
         <dict>
             <key>LANGUAGE_CODE</key>
